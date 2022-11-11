@@ -10,6 +10,11 @@ var movementInput = Vector2(0, 0)
 func _ready():
 	pass
 
+func get_mouse_angle():
+	var direction = get_global_mouse_position() - global_position
+	return atan2(direction.y, direction.x)
+	 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	movementInput = Vector2(0, 0)
@@ -24,6 +29,13 @@ func _process(delta):
 		movementInput += Vector2(0, 1)
 		
 	movementInput = movementInput.normalized()
+	
+	self.rotation = get_mouse_angle()
+	
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT and event.pressed:
+			print("attack!")
 		
 func _physics_process(delta):
 	move_and_collide(movementInput * speed)
