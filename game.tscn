@@ -125,13 +125,11 @@ shape = SubResource( 7 )
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -2792.85, 3100.02 )
 rotation = -0.0610865
-scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -2898.85, 3467.11 )
 rotation = -0.0610865
-scale = Vector2( 1, 1 )
 shape = SubResource( 9 )
 
 [node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="StaticBody2D"]
