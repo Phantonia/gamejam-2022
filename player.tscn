@@ -24,5 +24,6 @@ zoom = Vector2( 0.5, 0.5 )
 [node name="WeaponAttachment" type="Node2D" parent="."]
 
 [node name="Sprite2" type="Sprite" parent="WeaponAttachment"]
-position = Vector2( -15, -15 )
+position = Vector2( 13, -21 )
+rotation = 1.28282
 texture = ExtResource( 3 )
