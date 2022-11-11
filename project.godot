@@ -14,6 +14,14 @@ config/name="SleepingNonsense"
 run/main_scene="res://game.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=420
+window/size/height=256
+window/size/resizable=false
+window/size/test_width=840
+window/size/test_height=512
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

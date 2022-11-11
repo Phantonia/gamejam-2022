@@ -35,7 +35,12 @@ func _process(delta):
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
-			print("attack!")
+			attack()
+			
+func attack():
+	$WeaponAttachment.rotation = -1
+	yield(get_tree().create_timer(.1), "timeout")
+	$WeaponAttachment.rotation = 0
 		
 func _physics_process(delta):
 	move_and_collide(movementInput * speed)
