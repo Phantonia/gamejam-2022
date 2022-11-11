@@ -6,6 +6,8 @@ extends KinematicBody2D
 var speed = 420 #15 #4.2 * 6.9
 var movementInput = Vector2(0, 0)
 
+var naziInRange = null
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -41,6 +43,16 @@ func attack():
 	$WeaponAttachment.rotation = -1
 	yield(get_tree().create_timer(.1), "timeout")
 	$WeaponAttachment.rotation = 0
+	if (naziInRange != null):
+		if naziInRange.has_method("get_hit"):
+			naziInRange.get_hit()
 		
 func _physics_process(delta):
 	move_and_slide(movementInput * speed)
+
+func _on_WeaponAttachment_body_entered(body):
+	naziInRange = body
+
+
+func _on_WeaponAttachment_body_exited(body):
+	naziInRange = null

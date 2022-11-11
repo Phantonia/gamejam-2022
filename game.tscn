@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/temp/Map.png" type="Texture" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://nazi.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 835, 126 )
@@ -137,3 +138,19 @@ polygon = PoolVector2Array( -3238, 2897, -3232, 3007, -3035, 2995, -3021, 3210, 
 
 [node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PoolVector2Array( 4102, 1619, 4096, 1390, 4392, 1092, 4512, 960, 4568, 876, 4584, 822, 4578, 784, 4556, 754, 4513, 728, 4458, 712, 4392, 700, 4317, 700, 4313, 494, 4419, 493, 4534, 494, 4651, 511, 4744, 538, 4795, 563, 4838, 602, 4862, 650, 4859, 737, 4830, 814, 4772, 897, 4710, 983, 4566, 1151, 4283, 1442 )
+
+[node name="nazi4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 85, 376 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 373, 325 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 161, 289 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi" parent="." instance=ExtResource( 3 )]
+position = Vector2( -4.99997, 167 )
+scale = Vector2( 0.2, 0.2 )
