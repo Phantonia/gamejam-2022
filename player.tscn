@@ -26,7 +26,7 @@ scale = Vector2( 1.05302, 1.06361 )
 texture = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WeaponAttachment"]
-polygon = PoolVector2Array( 2, -6, 1, -12, 5, -24, 9, -29, 17, -30, 19, -27, 7, -5, 4, -5 )
+polygon = PoolVector2Array( 2, -6, 1, -12, 5, -24, 11, -32, 18, -32, 19, -27, 7, -5, 4, -5 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true

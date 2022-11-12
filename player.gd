@@ -44,15 +44,20 @@ func attack():
 	yield(get_tree().create_timer(.1), "timeout")
 	$WeaponAttachment.rotation = 0
 	if (naziInRange != null):
-		if naziInRange.has_method("get_hit"):
-			naziInRange.get_hit()
+		print("Attack Nazi")
+		naziInRange.get_hit()
 		
 func _physics_process(delta):
 	move_and_slide(movementInput * speed)
 
 func _on_WeaponAttachment_body_entered(body):
-	naziInRange = body
+	if is_nazi(body):
+		naziInRange = body
 
 
 func _on_WeaponAttachment_body_exited(body):
-	naziInRange = null
+	if is_nazi(body):
+		naziInRange = null
+	
+func is_nazi(body):
+	return body.has_method("get_hit")

@@ -10,7 +10,10 @@ func _ready():
 	
 func _process(delta):
 	if hp <= 0:
-		get_parent().remove_child(self)
+		die()
 
 func get_hit():
 	hp -= 1
+	
+func die():
+	get_parent().remove_child(self)
