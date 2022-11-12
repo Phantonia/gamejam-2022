@@ -151,26 +151,6 @@ polygon = PoolVector2Array( -3238, 2897, -3232, 3007, -3035, 2995, -3021, 3210, 
 [node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="Buildings"]
 polygon = PoolVector2Array( 4102, 1619, 4096, 1390, 4392, 1092, 4512, 960, 4568, 876, 4584, 822, 4578, 784, 4556, 754, 4513, 728, 4458, 712, 4392, 700, 4317, 700, 4313, 494, 4419, 493, 4534, 494, 4651, 511, 4744, 538, 4795, 563, 4838, 602, 4862, 650, 4859, 737, 4830, 814, 4772, 897, 4710, 983, 4566, 1151, 4283, 1442 )
 
-[node name="nazi4" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
-position = Vector2( 85, 376 )
-scale = Vector2( 0.2, 0.2 )
-
-[node name="nazi3" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
-position = Vector2( 373, 325 )
-scale = Vector2( 0.2, 0.2 )
-
-[node name="nazi2" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
-position = Vector2( 161, 289 )
-scale = Vector2( 0.2, 0.2 )
-
-[node name="nazi" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
-position = Vector2( -4.99997, 167 )
-scale = Vector2( 0.2, 0.2 )
-
-[node name="nazi5" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
-position = Vector2( 4254, 843 )
-scale = Vector2( 0.2, 0.2 )
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="healthBar" type="ProgressBar" parent="CanvasLayer"]
@@ -190,23 +170,128 @@ scale = Vector2( 0.9725, 0.9725 )
 texture = ExtResource( 7 )
 script = ExtResource( 8 )
 
-[node name="nazi6" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
+[node name="collectible" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3477, 2182 )
+
+[node name="nazis" type="Node2D" parent="."]
+
+[node name="nazi4" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 85, 376 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi3" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 373, 325 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi2" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 161, 289 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( -4.99997, 167 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi19" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 4086, 1152 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi22" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 3884, 2789 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi21" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 3988, 2621 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi20" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 4018, 1870 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi5" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 4254, 843 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi6" parent="nazis" instance=ExtResource( 3 )]
 position = Vector2( -2378, 2943 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="nazi8" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
+[node name="nazi8" parent="nazis" instance=ExtResource( 3 )]
 position = Vector2( -2000, 3235 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="nazi7" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
+[node name="nazi7" parent="nazis" instance=ExtResource( 3 )]
 position = Vector2( -2270, 3340 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="nazi9" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
+[node name="nazi9" parent="nazis" instance=ExtResource( 3 )]
 position = Vector2( -2250, 3155 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="collectible" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3477, 2182 )
+[node name="nazi11" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( -2716, 789 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi13" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( -1306, 1696 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi12" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( -1481, 1424 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi30" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( -3039, 1276 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi10" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( -2701, 998 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi15" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( -189, 3262 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi16" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( -446, 3632 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi18" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 2100, 1955 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi17" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 1760, 1933 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi25" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 5276, 29 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi24" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 5380, 213 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi23" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 5100, 157 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi29" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 2444, 269 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi28" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 2276, 93 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi27" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 2716, 165 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi26" parent="nazis" instance=ExtResource( 3 )]
+position = Vector2( 2484, 101 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi14" parent="nazis" instance=ExtResource( 3 )]
+scale = Vector2( 0.2, 0.2 )
 
 [connection signal="health_changed" from="Player" to="CanvasLayer/healthBar" method="_on_Player_health_changed"]
