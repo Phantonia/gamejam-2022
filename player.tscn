@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/player/player_weapon.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 14.0357
+radius = 12.0416
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -16,7 +16,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 
-[node name="WeaponAttachment" type="Node2D" parent="."]
+[node name="WeaponAttachment" type="Area2D" parent="."]
 position = Vector2( 7, -12 )
 
 [node name="Sprite2" type="Sprite" parent="WeaponAttachment"]
@@ -25,6 +25,12 @@ rotation = 1.28282
 scale = Vector2( 1.05302, 1.06361 )
 texture = ExtResource( 3 )
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WeaponAttachment"]
+polygon = PoolVector2Array( 2, -6, 1, -12, 5, -24, 11, -32, 18, -32, 19, -27, 7, -5, 4, -5 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.5, 0.5 )
+
+[connection signal="body_entered" from="WeaponAttachment" to="." method="_on_WeaponAttachment_body_entered"]
+[connection signal="body_exited" from="WeaponAttachment" to="." method="_on_WeaponAttachment_body_exited"]
