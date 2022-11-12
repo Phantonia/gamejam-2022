@@ -4,15 +4,16 @@
 [ext_resource path="res://nazi.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 50.1597
+radius = 50.3587
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 2608.66
+radius = 5898.6
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 65.9697
+radius = 59.2115
 
-[node name="nazi" type="KinematicBody2D"]
+[node name="nazi" type="KinematicBody2D" groups=["Nazi"]]
+scale = Vector2( 0.2, 0.2 )
 script = ExtResource( 2 )
 
 [node name="Player" type="Sprite" parent="."]

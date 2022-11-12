@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+signal health_changed(value)
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -8,6 +9,7 @@ var movementInput = Vector2(0, 0)
 
 var naziInRange = null
 
+var maxhp = 10
 var hp = 10
 
 # Called when the node enters the scene tree for the first time.
@@ -24,6 +26,7 @@ func get_mouse_angle():
 func _process(delta):
 	if hp <= 0:
 		print("DEAD")
+		get_tree().change_scene("res://gameOver.tscn")
 	
 	movementInput = Vector2(0, 0)
 	
@@ -67,8 +70,8 @@ func is_nazi(body):
 	return body.is_in_group("Nazi")
 
 func get_hit():
-	print("damage")
 	hp -= 1
+	emit_signal("health_changed", float(hp) / float(maxhp))
 
 
 func _on_HitBox_body_entered(body):
