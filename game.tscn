@@ -164,6 +164,10 @@ scale = Vector2( 0.2, 0.2 )
 position = Vector2( -4.99997, 167 )
 scale = Vector2( 0.2, 0.2 )
 
+[node name="nazi5" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
+position = Vector2( 4254, 843 )
+scale = Vector2( 0.2, 0.2 )
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="healthBar" type="ProgressBar" parent="CanvasLayer"]
@@ -176,5 +180,21 @@ custom_styles/bg = SubResource( 11 )
 value = 100.0
 percent_visible = false
 script = ExtResource( 5 )
+
+[node name="nazi6" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
+position = Vector2( -2378, 2943 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi8" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
+position = Vector2( -2000, 3235 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi7" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
+position = Vector2( -2270, 3340 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="nazi9" parent="." groups=["Nazi"] instance=ExtResource( 3 )]
+position = Vector2( -2250, 3155 )
+scale = Vector2( 0.2, 0.2 )
 
 [connection signal="health_changed" from="Player" to="CanvasLayer/healthBar" method="_on_Player_health_changed"]

@@ -70,7 +70,6 @@ func is_nazi(body):
 	return body.is_in_group("Nazi")
 
 func get_hit():
-	print("damage: " + str(hp / maxhp))
 	hp -= 1
 	emit_signal("health_changed", float(hp) / float(maxhp))
 

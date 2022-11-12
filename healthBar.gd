@@ -17,5 +17,4 @@ func _ready():
 
 
 func _on_Player_health_changed(value):
-	print(str(value) + " arrive")
 	self.value = self.max_value * value
