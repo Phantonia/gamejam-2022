@@ -8,6 +8,8 @@ var movementInput = Vector2(0, 0)
 
 var naziInRange = null
 
+var hp = 10
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -20,6 +22,9 @@ func get_mouse_angle():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if hp <= 0:
+		print("DEAD")
+	
 	movementInput = Vector2(0, 0)
 	
 	if Input.is_key_pressed(KEY_A):
@@ -45,7 +50,6 @@ func attack():
 	yield(get_tree().create_timer(.1), "timeout")
 	$WeaponAttachment.rotation = 0
 	if (naziInRange != null):
-		print("Attack Nazi")
 		naziInRange.get_hit()
 func _physics_process(delta):
 	move_and_slide(movementInput * speed)
@@ -61,3 +65,13 @@ func _on_WeaponAttachment_body_exited(body):
 	
 func is_nazi(body):
 	return body.is_in_group("Nazi")
+
+func get_hit():
+	print("damage")
+	hp -= 1
+
+
+func _on_HitBox_body_entered(body):
+	if body.is_in_group("Bullet"):
+		get_hit()
+		body.queue_free()
