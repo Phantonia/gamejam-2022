@@ -52,7 +52,6 @@ func attack():
 	$WeaponAttachment.rotation = 0
 	if (naziInRange != null):
 		naziInRange.get_hit()
-		
 func _physics_process(delta):
 	move_and_slide(movementInput * speed)
 
