@@ -47,7 +47,6 @@ func attack():
 	if (naziInRange != null):
 		print("Attack Nazi")
 		naziInRange.get_hit()
-		
 func _physics_process(delta):
 	move_and_slide(movementInput * speed)
 

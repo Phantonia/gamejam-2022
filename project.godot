@@ -17,10 +17,12 @@ config/icon="res://icon.png"
 [display]
 
 window/size/width=420
-window/size/height=256
+window/size/height=210
 window/size/resizable=false
-window/size/test_width=840
-window/size/test_height=512
+window/size/test_width=1024
+window/size/test_height=600
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [gui]
 

@@ -13,6 +13,9 @@ func _process(delta):
 		die()
 
 func get_hit():
+	var splatter = preload("res://bloodSplatter.tscn").instance()
+	add_child(splatter)
+	splatter.global_position = global_position
 	hp -= 1
 	
 func die():
