@@ -14,7 +14,8 @@ func _ready():
 
 func get_mouse_angle():
 	var direction = get_global_mouse_position() - global_position
-	return atan2(direction.y, direction.x) + PI/2
+	# mouse angle is angle of machete, not angle of pc eyes
+	return atan2(direction.y, direction.x) + deg2rad(60)
 	 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -60,4 +61,4 @@ func _on_WeaponAttachment_body_exited(body):
 		naziInRange = null
 	
 func is_nazi(body):
-	return body.has_method("get_hit")
+	return body.is_in_group("Nazi")
