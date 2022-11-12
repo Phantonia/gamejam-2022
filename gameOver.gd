@@ -12,7 +12,7 @@ func _ready():
 
 func _input(event):
 	if event is InputEventKey:
-		print("RESTART")
+		yield(get_tree().create_timer(.5), "timeout")
 		get_tree().change_scene("res://game.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

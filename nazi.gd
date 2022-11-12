@@ -20,7 +20,7 @@ func get_hit():
 	hp -= 1
 	
 func die():
-	get_parent().remove_child(self)
+	queue_free()
 	
 func start_shooting(player):
 	shoots = true
