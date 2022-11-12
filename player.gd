@@ -24,6 +24,7 @@ func get_mouse_angle():
 func _process(delta):
 	if hp <= 0:
 		print("DEAD")
+		get_tree().change_scene("res://gameOver.tscn")
 	
 	movementInput = Vector2(0, 0)
 	
