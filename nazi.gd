@@ -13,7 +13,8 @@ func _process(delta):
 	if hp <= 0:
 		die()
 	if player != null:
-		rotation = Vector2(0, -1).angle_to(position.direction_to(player.position))
+		pass
+#		rotation = Vector2(0, -1).angle_to(position.direction_to(player.position))
 
 func get_hit():
 	var splatter = preload("res://bloodSplatter.tscn").instance()
@@ -50,6 +51,7 @@ func _on_Timer_timeout():
 	var dir = position.direction_to(player.position)
 	var randomAngle = randf() * PI / 12 - PI / 24
 	dir = dir.rotated(randomAngle)
+	rotation = Vector2(0, -1).angle_to(dir) + deg2rad(-5)
 	bullet.launch(position + 20 * dir, dir)
 	get_parent().add_child(bullet)
 

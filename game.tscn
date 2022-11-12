@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/temp/Map.png" type="Texture" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
@@ -572,6 +572,9 @@ extents = Vector2( 92.381, 157.914 )
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 209.141, 86.9342 )
 
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 1, 0, 0, 1 )
+
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.207843, 0.207843, 0.207843, 1 )
 
@@ -699,6 +702,7 @@ margin_left = 8.0
 margin_top = 9.0
 margin_right = 114.0
 margin_bottom = 23.0
+custom_styles/fg = SubResource( 12 )
 custom_styles/bg = SubResource( 11 )
 value = 100.0
 percent_visible = false
@@ -803,3 +807,5 @@ position = Vector2( 2716, 165 )
 position = Vector2( 2484, 101 )
 
 [node name="nazi14" parent="nazis" instance=ExtResource( 3 )]
+
+[connection signal="health_changed" from="Player" to="CanvasLayer/healthBar" method="_on_Player_health_changed"]
