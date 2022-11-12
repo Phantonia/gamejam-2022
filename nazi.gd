@@ -12,6 +12,8 @@ func _ready():
 func _process(delta):
 	if hp <= 0:
 		die()
+	if player != null:
+		rotation = Vector2(0, -1).angle_to(position.direction_to(player.position))
 
 func get_hit():
 	var splatter = preload("res://bloodSplatter.tscn").instance()
