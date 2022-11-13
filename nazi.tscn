@@ -16,7 +16,7 @@ radius = 59.2115
 scale = Vector2( 0.2, 0.2 )
 script = ExtResource( 2 )
 
-[node name="Nazi+Weapon-Pixel" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -25 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 1 )
