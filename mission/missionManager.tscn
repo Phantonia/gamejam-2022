@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://mission/missionManager.gd" type="Script" id=1]
+[ext_resource path="res://mission/mission.gd" type="Script" id=2]
+[ext_resource path="res://assets/objekte/Schnee.png" type="Texture" id=3]
+[ext_resource path="res://assets/objekte/Punkflöte.png" type="Texture" id=4]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+text = "Finde den \"Schnee\", damit die Rebellionsanführer \"Skifahren\" können"
+item = ExtResource( 3 )
+itemSpawnPosition = Vector2( 0, 0 )
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 2 )
+text = "Finde die Punkflöte, um die Flamme der Rebellion mit einem Feurigen Lied neu zu entfachen"
+item = ExtResource( 4 )
+itemSpawnPosition = Vector2( 0, 0 )
+
+[node name="MissionManager" type="Node2D"]
+script = ExtResource( 1 )
+missions = [ SubResource( 1 ), SubResource( 3 ) ]

@@ -7,6 +7,8 @@ var picked_up = false
 func _ready():
 	randomize()
 	
+	$MissionManager.next_mission()
+	
 	if GlobalVariables.last_mission_success:
 		GlobalVariables.level += 1
 	
