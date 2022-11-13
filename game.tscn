@@ -1347,11 +1347,16 @@ scale = Vector2( 0.9725, 0.9725 )
 texture = ExtResource( 7 )
 script = ExtResource( 8 )
 
+[node name="nazisLeft" type="Label" parent="CanvasLayer"]
+margin_left = 21.0
+margin_top = 30.0
+margin_right = 61.0
+margin_bottom = 44.0
+
 [node name="collectible" parent="." instance=ExtResource( 6 )]
 position = Vector2( -2901, -291 )
 
 [node name="nazis" type="Node2D" parent="."]
-visible = false
 
 [node name="nazi4" parent="nazis" instance=ExtResource( 3 )]
 position = Vector2( 85, 376 )
@@ -1449,6 +1454,23 @@ autoplay = true
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 autoplay = true
+
+[node name="possibleCollectibleLocations" type="Node2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="possibleCollectibleLocations"]
+position = Vector2( -2807, -273 )
+
+[node name="Node2D2" type="Node2D" parent="possibleCollectibleLocations"]
+position = Vector2( 5011, 395 )
+
+[node name="Node2D3" type="Node2D" parent="possibleCollectibleLocations"]
+position = Vector2( -3493, 3430 )
+
+[node name="Node2D4" type="Node2D" parent="possibleCollectibleLocations"]
+position = Vector2( -323, 2954 )
+
+[node name="Node2D5" type="Node2D" parent="possibleCollectibleLocations"]
+position = Vector2( 3394, 1724 )
 
 [connection signal="health_changed" from="Player" to="CanvasLayer/healthBar" method="_on_Player_health_changed"]
 [connection signal="pick_up" from="Player" to="collectible" method="_on_Player_pick_up"]
