@@ -51,7 +51,7 @@ func _on_collectible_picked_up(collectible: Area2D):
 
 func _on_hqPos_body_entered(body):
 	if body.is_in_group("Player"):
-		if picked_up and get_nazi_count() == 0:
+		if picked_up: #and get_nazi_count() == 0:
 			GlobalVariables.last_mission_success = true
 			get_tree().change_scene("res://gameOver.tscn")
 
