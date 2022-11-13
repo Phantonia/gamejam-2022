@@ -34,7 +34,7 @@ func _ready():
 				$nazis.remove_child(child)
 				break
 		
-	$"CanvasLayer/nazisLeft".text = str(get_nazi_count()) + " Nazis left"
+	#$"CanvasLayer/nazisLeft".text = str(get_nazi_count()) + " Nazis left"
 
 func nazi_count_for_level(level):
 	var minCount = 4

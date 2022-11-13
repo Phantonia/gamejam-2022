@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/temp/Map.png" type="Texture" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
@@ -1350,6 +1350,14 @@ position = Vector2( 391, 31 )
 scale = Vector2( 0.9725, 0.9725 )
 texture = ExtResource( 7 )
 script = ExtResource( 8 )
+
+[node name="MissionText" type="Label" parent="CanvasLayer" groups=["mission_statement"]]
+margin_left = 5.0
+margin_top = 32.0
+margin_right = 205.0
+margin_bottom = 63.0
+text = "mission text"
+autowrap = true
 
 [node name="collectible" parent="." instance=ExtResource( 6 )]
 position = Vector2( -2901, -291 )
