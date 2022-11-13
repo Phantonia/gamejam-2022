@@ -36,7 +36,7 @@ func _ready():
 	#$"CanvasLayer/nazisLeft".text = str(get_nazi_count()) + " Nazis left"
 
 func nazi_count_for_level(level):
-	var minCount = 4
+	var minCount = 30
 	var slope = 2
 	return min($nazis.get_child_count(), minCount + slope * level)
 

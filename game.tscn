@@ -1159,6 +1159,21 @@
 43/shapes = [  ]
 43/z_index = 0
 
+[sub_resource type="Shader" id=17]
+code = "shader_type canvas_item;
+
+void fragment(){
+	vec3 col = vec3(0.2, 0.4, 1.0);
+  	COLOR  = vec4(col * abs(sin(UV.x * 10.) * sin(UV.y * 10.) * sin(TIME * 3.)), 1.);
+}
+
+"
+
+[sub_resource type="ShaderMaterial" id=18]
+shader = SubResource( 17 )
+
+[sub_resource type="NoiseTexture" id=19]
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 832, 137.5 )
 
@@ -1201,21 +1216,6 @@ bg_color = Color( 0.207843, 0.207843, 0.207843, 1 )
 [sub_resource type="CircleShape2D" id=16]
 radius = 292.323
 
-[sub_resource type="Shader" id=17]
-code = "shader_type canvas_item;
-
-void fragment(){
-	vec3 col = vec3(0.2, 0.4, 1.0);
-  	COLOR  = vec4(col * abs(sin(UV.x * 10.) * sin(UV.y * 10.) * sin(TIME * 3.)), 1.);
-}
-
-"
-
-[sub_resource type="ShaderMaterial" id=18]
-shader = SubResource( 17 )
-
-[sub_resource type="NoiseTexture" id=19]
-
 [node name="game" type="Node2D"]
 script = ExtResource( 4 )
 
@@ -1240,6 +1240,12 @@ texture = ExtResource( 12 )
 position = Vector2( -207.774, 2279.19 )
 scale = Vector2( 4.13976, 4.13977 )
 texture = ExtResource( 13 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+material = SubResource( 18 )
+position = Vector2( 3000, 1000 )
+texture = SubResource( 19 )
+polygon = PoolVector2Array( 236, -45, 228, -89, 354, -92, 352, -65, 692, -71, 689, -130, 845, -130, 853, 265, 797, 260, 676, 201, 502, 51, 374, 47, 240, -8 )
 
 [node name="Map" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.184314 )
@@ -1396,7 +1402,6 @@ autowrap = true
 position = Vector2( -2901, -291 )
 
 [node name="nazis" type="Node2D" parent="."]
-visible = false
 
 [node name="nazi4" parent="nazis" instance=ExtResource( 3 )]
 position = Vector2( 85, 376 )
@@ -1537,12 +1542,6 @@ position = Vector2( 1447, 2946 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hqPos"]
 shape = SubResource( 16 )
-
-[node name="Polygon2D" type="Polygon2D" parent="."]
-material = SubResource( 18 )
-position = Vector2( 3000, 1000 )
-texture = SubResource( 19 )
-polygon = PoolVector2Array( 236, -45, 228, -89, 354, -92, 352, -65, 692, -71, 689, -130, 845, -130, 853, 265, 797, 260, 676, 201, 502, 51, 374, 47, 240, -8 )
 
 [connection signal="health_changed" from="Player" to="CanvasLayer/healthBar" method="_on_Player_health_changed"]
 [connection signal="pick_up" from="Player" to="collectible" method="_on_Player_pick_up"]
