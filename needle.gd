@@ -14,4 +14,9 @@ func _ready():
 func _process(delta):
 	var player = get_parent().get_parent().get_node("Player")
 	var collec = get_parent().get_parent().get_node("collectible")
+	
+	if collec == null:
+		queue_free()
+		return
+	
 	rotation = Vector2(1, 0).angle_to(player.position.direction_to(collec.position))

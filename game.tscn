@@ -715,7 +715,7 @@ texture = ExtResource( 7 )
 script = ExtResource( 8 )
 
 [node name="collectible" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3477, 2182 )
+position = Vector2( -2901, -291 )
 
 [node name="nazis" type="Node2D" parent="."]
 
@@ -809,3 +809,5 @@ position = Vector2( 2484, 101 )
 [node name="nazi14" parent="nazis" instance=ExtResource( 3 )]
 
 [connection signal="health_changed" from="Player" to="CanvasLayer/healthBar" method="_on_Player_health_changed"]
+[connection signal="pick_up" from="Player" to="collectible" method="_on_Player_pick_up"]
+[connection signal="picked_up" from="collectible" to="." method="_on_collectible_picked_up"]
