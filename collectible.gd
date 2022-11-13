@@ -7,8 +7,6 @@ var player = null
 func _ready():
 	pass
 
-
-
 func _on_Player_pick_up():
 	if player != null:
 		emit_signal("picked_up", self)

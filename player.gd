@@ -26,7 +26,8 @@ func get_mouse_angle():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if hp <= 0:
-		print("DEAD")
+		GlobalVariables.last_mission_dream = false
+		GlobalVariables.last_mission_success = false
 		get_tree().change_scene("res://gameOver.tscn")
 	
 	movementInput = Vector2(0, 0)
