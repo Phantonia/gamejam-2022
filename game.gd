@@ -11,12 +11,15 @@ func _ready():
 	
 	if GlobalVariables.last_mission_success:
 		GlobalVariables.level += 1
-		
 	
-	if GlobalVariables.level != 1:
-		dream = randi() % 2 == 1
-	else:
+	
+	if GlobalVariables.level == 1:
+		dream = true
+	elif GlobalVariables.level == 2:
 		dream = false
+	else:
+		dream = randi() % 2 == 1
+	
 	GlobalVariables.last_mission_dream = dream
 	
 	print("Level " + str(GlobalVariables.level))
