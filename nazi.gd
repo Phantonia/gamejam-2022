@@ -58,5 +58,4 @@ func _on_Timer_timeout():
 
 func _on_HitBox_body_entered(body):
 	if body.is_in_group("Bullet") and body != self:
-		print("destroy bullet")
 		body.queue_free()

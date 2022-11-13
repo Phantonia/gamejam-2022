@@ -1,21 +1,28 @@
 extends Node2D
 
-var mission : int
 var dream : bool
 
 var picked_up = false
 
 func _ready():
 	randomize()
-	GlobalVariables.level += 1
+	
+	if GlobalVariables.last_mission_success:
+		GlobalVariables.level += 1
 	
 	randomly_place_collectible()
 	
-	mission = randi() % 2 + 1
-	dream = randi() % 2 == 1
+	if GlobalVariables.level != 1:
+		dream = randi() % 2 == 1
+	else:
+		dream = false
+	GlobalVariables.last_mission_dream = dream
+	
+	print("Level " + str(GlobalVariables.level))
+	print("Dream = " + str(dream))
 	
 	var removeCount = $nazis.get_child_count() - nazi_count_for_level(GlobalVariables.level)
-	print("removeCount = " + str(removeCount))
+#	print("removeCount = " + str(removeCount))
 	for i in range(removeCount):
 		var index = randi() % $nazis.get_child_count()
 		$nazis.get_child(index).queue_free()
@@ -38,6 +45,5 @@ func _on_collectible_picked_up(collectible: Area2D):
 func _on_hqPos_body_entered(body):
 	if body.is_in_group("Player"):
 		if picked_up: # and all nazis killed
-			GlobalVariables.last_mission_dream = false
 			GlobalVariables.last_mission_success = true
 			get_tree().change_scene("res://gameOver.tscn")

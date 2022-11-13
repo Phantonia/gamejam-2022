@@ -17,6 +17,9 @@ func _ready():
 		msg += "Unfortunately, that was a dream and you helped the regime."
 	else:
 		msg += "Fortunately, that was a dream and you didn't help the regime."
+		
+	if success != dream:
+		msg += " You reached level " + str(GlobalVariables.level + 1)
 	
 	$label.text = msg
 
