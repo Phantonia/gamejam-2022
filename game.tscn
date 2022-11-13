@@ -1490,3 +1490,4 @@ shape = SubResource( 16 )
 [connection signal="health_changed" from="Player" to="CanvasLayer/healthBar" method="_on_Player_health_changed"]
 [connection signal="pick_up" from="Player" to="collectible" method="_on_Player_pick_up"]
 [connection signal="picked_up" from="collectible" to="." method="_on_collectible_picked_up"]
+[connection signal="body_entered" from="hqPos" to="." method="_on_hqPos_body_entered"]

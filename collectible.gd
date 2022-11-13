@@ -6,6 +6,9 @@ var player = null
 
 func _ready():
 	pass
+	
+func set_image(img):
+	$Collectible.texture = img
 
 func _on_Player_pick_up():
 	if player != null:
