@@ -7,7 +7,10 @@ var player = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var rnd = randf()
+	print(rnd)
+	if rnd <= 0.5:
+		$Sprite.texture = load("res://assets/Nazi/Nazi+Weapon+Weihnachten-Pixel.png")
 	
 func _process(delta):
 	if hp <= 0:

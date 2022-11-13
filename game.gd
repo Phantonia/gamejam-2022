@@ -7,10 +7,11 @@ var picked_up = false
 func _ready():
 	randomize()
 	
+	$MissionManager.next_mission()
+	
 	if GlobalVariables.last_mission_success:
 		GlobalVariables.level += 1
-	
-	randomly_place_collectible()
+		
 	
 	if GlobalVariables.level != 1:
 		dream = randi() % 2 == 1
@@ -32,28 +33,37 @@ func _ready():
 				$nazis.remove_child(child)
 				break
 		
-	$"CanvasLayer/nazisLeft".text = str(get_nazi_count()) + " Nazis left"
+	#$"CanvasLayer/nazisLeft".text = str(get_nazi_count()) + " Nazis left"
 
 func nazi_count_for_level(level):
 	var minCount = 4
 	var slope = 2
 	return min($nazis.get_child_count(), minCount + slope * level)
 
-func randomly_place_collectible():
-	var index = randi() % $possibleCollectibleLocations.get_child_count()
-	$collectible.position = $possibleCollectibleLocations.get_child(index).position
 
 func _on_collectible_picked_up(collectible: Area2D):
 	remove_child(collectible)
 	collectible.position = Vector2(350, 30)
 	$CanvasLayer.add_child(collectible)
 	picked_up = true
+	
+
+func drop_collectible(collectible: Area2D):
+	$CanvasLayer.remove_child(collectible)
+	collectible.position = Vector2(-10000, -10000)
+	add_child(collectible)
+	picked_up = false
 
 func _on_hqPos_body_entered(body):
+	print("entered hqPos")
 	if body.is_in_group("Player"):
-		if picked_up and get_nazi_count() == 0:
-			GlobalVariables.last_mission_success = true
-			get_tree().change_scene("res://gameOver.tscn")
+		if picked_up: #and get_nazi_count() == 0:
+			if $MissionManager.done():
+				GlobalVariables.last_mission_success = true
+				get_tree().change_scene("res://gameOver.tscn")
+			else:
+				drop_collectible(get_node("CanvasLayer/collectible"))
+				$MissionManager.next_mission()
 
 func get_nazi_count() -> int:
 	var count = 0
