@@ -26,7 +26,7 @@ func get_mouse_angle():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if hp <= 0:
-		print("DEAD")
+		GlobalVariables.last_mission_success = false
 		get_tree().change_scene("res://gameOver.tscn")
 	
 	movementInput = Vector2(0, 0)
@@ -50,7 +50,7 @@ func _input(event):
 			attack()
 	if event.is_action_pressed("ui_select"):
 		emit_signal("pick_up")
-			
+
 func attack():
 	$WeaponAttachment.rotation = -1
 	yield(get_tree().create_timer(.1), "timeout")
