@@ -50,7 +50,7 @@ func _input(event):
 			attack()
 	if event.is_action_pressed("ui_select"):
 		emit_signal("pick_up")
-			
+
 func attack():
 	$WeaponAttachment.rotation = -1
 	yield(get_tree().create_timer(.1), "timeout")
