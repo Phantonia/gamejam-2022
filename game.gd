@@ -20,3 +20,10 @@ func nazi_count_for_level(level):
 	var minCount = 4
 	var slope = 2
 	return min($nazis.get_child_count(), minCount + slope * level)
+
+
+func _on_collectible_picked_up(collectible: Area2D):
+	remove_child(collectible)
+	collectible.position = Vector2(380, 30)
+	$CanvasLayer.add_child(collectible)
+	

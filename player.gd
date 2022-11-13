@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal health_changed(value)
+signal pick_up()
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -47,6 +48,8 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
 			attack()
+	if event.is_action_pressed("ui_select"):
+		emit_signal("pick_up")
 			
 func attack():
 	$WeaponAttachment.rotation = -1
