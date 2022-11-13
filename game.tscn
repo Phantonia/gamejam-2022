@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/temp/Map.png" type="Texture" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://needle.gd" type="Script" id=8]
 [ext_resource path="res://assets/tiles/beerPongTableLeft.png" type="Texture" id=9]
 [ext_resource path="res://assets/tiles/tileset.png" type="Texture" id=10]
+[ext_resource path="res://assets/objekte/bank2.png" type="Texture" id=11]
+[ext_resource path="res://assets/objekte/Mülleimer.png" type="Texture" id=12]
+[ext_resource path="res://assets/objekte/Auto_pink.png" type="Texture" id=13]
+[ext_resource path="res://assets/objekte/Golfcart.png" type="Texture" id=14]
 
 [sub_resource type="TileSet" id=10]
 0/name = "beerPongTableLeft.png 0"
@@ -581,6 +585,12 @@ bg_color = Color( 0.207843, 0.207843, 0.207843, 1 )
 [sub_resource type="CircleShape2D" id=13]
 radius = 450.809
 
+[sub_resource type="CircleShape2D" id=14]
+radius = 13.0
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 30, 7 )
+
 [node name="game" type="Node2D"]
 script = ExtResource( 4 )
 
@@ -754,6 +764,7 @@ shape = SubResource( 13 )
 position = Vector2( -2901, -291 )
 
 [node name="nazis" type="Node2D" parent="."]
+visible = false
 
 [node name="nazi4" parent="nazis" instance=ExtResource( 3 )]
 position = Vector2( 85, 376 )
@@ -843,6 +854,240 @@ position = Vector2( 2716, 165 )
 position = Vector2( 2484, 101 )
 
 [node name="nazi14" parent="nazis" instance=ExtResource( 3 )]
+
+[node name="Golfcard" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Golfcard"]
+position = Vector2( 557.5, 1150 )
+scale = Vector2( 0.828125, 1.03125 )
+polygon = PoolVector2Array( -0.603821, -31.0303, -11.4717, -31.0303, -13.8868, -30.0607, -16.3019, -28.1212, -17.5095, -25.2122, -17.5095, -21.3334, -21.1321, -21.3334, -22.3397, -19.3939, -22.3397, -11.6364, -19.9246, -8.72729, -17.5095, -8.72729, -17.5095, 15.5151, -19.9246, 15.5151, -22.3397, 17.4546, -22.3397, 26.1818, -19.9246, 28.1212, -17.5095, 28.1212, -17.5095, 30.0605, -15.0944, 32, 17.5094, 32, 19.9245, 30.0605, 19.9245, 28.1212, 22.3396, 28.1212, 24.7547, 26.1818, 24.7547, 17.4546, 22.3396, 15.5151, 19.9245, 15.5151, 19.9245, -9.69702, 22.3396, -9.69702, 24.7547, -11.6364, 24.7547, -19.3939, 22.3396, -22.303, 19.9245, -22.303, 19.9245, -27.1515, 18.717, -28.1212, 16.3019, -29.0909, 13.8868, -31.0303 )
+
+[node name="Golfcart" type="Sprite" parent="Golfcard"]
+position = Vector2( 557.5, 1150 )
+scale = Vector2( 0.828125, 1.03125 )
+texture = ExtResource( 14 )
+
+[node name="Mülleimer 1" type="StaticBody2D" parent="."]
+
+[node name="Mülleimer" type="Sprite" parent="Mülleimer 1"]
+position = Vector2( 3697, 850 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mülleimer 1"]
+position = Vector2( 3695, 849 )
+shape = SubResource( 14 )
+
+[node name="Mülleimer 2" type="StaticBody2D" parent="."]
+position = Vector2( -2720, 1090 )
+
+[node name="Mülleimer" type="Sprite" parent="Mülleimer 2"]
+position = Vector2( 3697, 850 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mülleimer 2"]
+position = Vector2( 3695, 849 )
+shape = SubResource( 14 )
+
+[node name="Mülleimer 3" type="StaticBody2D" parent="."]
+position = Vector2( -1440, 1350 )
+
+[node name="Mülleimer" type="Sprite" parent="Mülleimer 3"]
+position = Vector2( 3697, 850 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mülleimer 3"]
+position = Vector2( 3695, 849 )
+shape = SubResource( 14 )
+
+[node name="Mülleimer 4" type="StaticBody2D" parent="."]
+position = Vector2( -4502, 2021 )
+
+[node name="Mülleimer" type="Sprite" parent="Mülleimer 4"]
+position = Vector2( 3697, 850 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mülleimer 4"]
+position = Vector2( 3695, 849 )
+shape = SubResource( 14 )
+
+[node name="Mülleimer 5" type="StaticBody2D" parent="."]
+position = Vector2( -3127, 1632 )
+
+[node name="Mülleimer" type="Sprite" parent="Mülleimer 5"]
+position = Vector2( 3697, 850 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mülleimer 5"]
+position = Vector2( 3695, 849 )
+shape = SubResource( 14 )
+
+[node name="AUto 1" type="StaticBody2D" parent="."]
+
+[node name="AutoPink" type="Sprite" parent="AUto 1"]
+position = Vector2( -1840, 2144 )
+texture = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AUto 1"]
+polygon = PoolVector2Array( -1841, 2112, -1852, 2112, -1855, 2115, -1855, 2147, -1857, 2147, -1858, 2148, -1858, 2150, -1857, 2151, -1855, 2151, -1855, 2162, -1855, 2172, -1852, 2175, -1850, 2175, -1830, 2175, -1828, 2175, -1825, 2172, -1825, 2151, -1823, 2151, -1822, 2150, -1822, 2148, -1823, 2147, -1825, 2147, -1825, 2115, -1828, 2112 )
+
+[node name="AUto 2" type="StaticBody2D" parent="."]
+position = Vector2( -38, 0 )
+
+[node name="AutoPink" type="Sprite" parent="AUto 2"]
+position = Vector2( -1840, 2144 )
+texture = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AUto 2"]
+polygon = PoolVector2Array( -1841, 2112, -1852, 2112, -1855, 2115, -1855, 2147, -1857, 2147, -1858, 2148, -1858, 2150, -1857, 2151, -1855, 2151, -1855, 2162, -1855, 2172, -1852, 2175, -1850, 2175, -1830, 2175, -1828, 2175, -1825, 2172, -1825, 2151, -1823, 2151, -1822, 2150, -1822, 2148, -1823, 2147, -1825, 2147, -1825, 2115, -1828, 2112 )
+
+[node name="AUto 3" type="StaticBody2D" parent="."]
+position = Vector2( -77, 0 )
+
+[node name="AutoPink" type="Sprite" parent="AUto 3"]
+position = Vector2( -1840, 2144 )
+texture = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AUto 3"]
+polygon = PoolVector2Array( -1841, 2112, -1852, 2112, -1855, 2115, -1855, 2147, -1857, 2147, -1858, 2148, -1858, 2150, -1857, 2151, -1855, 2151, -1855, 2162, -1855, 2172, -1852, 2175, -1850, 2175, -1830, 2175, -1828, 2175, -1825, 2172, -1825, 2151, -1823, 2151, -1822, 2150, -1822, 2148, -1823, 2147, -1825, 2147, -1825, 2115, -1828, 2112 )
+
+[node name="AUto 4" type="StaticBody2D" parent="."]
+position = Vector2( 39, 1 )
+
+[node name="AutoPink" type="Sprite" parent="AUto 4"]
+position = Vector2( -1840, 2144 )
+texture = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AUto 4"]
+polygon = PoolVector2Array( -1841, 2112, -1852, 2112, -1855, 2115, -1855, 2147, -1857, 2147, -1858, 2148, -1858, 2150, -1857, 2151, -1855, 2151, -1855, 2162, -1855, 2172, -1852, 2175, -1850, 2175, -1830, 2175, -1828, 2175, -1825, 2172, -1825, 2151, -1823, 2151, -1822, 2150, -1822, 2148, -1823, 2147, -1825, 2147, -1825, 2115, -1828, 2112 )
+
+[node name="AUto 5" type="StaticBody2D" parent="."]
+position = Vector2( 78, 1 )
+
+[node name="AutoPink" type="Sprite" parent="AUto 5"]
+position = Vector2( -1840, 2144 )
+texture = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AUto 5"]
+polygon = PoolVector2Array( -1841, 2112, -1852, 2112, -1855, 2115, -1855, 2147, -1857, 2147, -1858, 2148, -1858, 2150, -1857, 2151, -1855, 2151, -1855, 2162, -1855, 2172, -1852, 2175, -1850, 2175, -1830, 2175, -1828, 2175, -1825, 2172, -1825, 2151, -1823, 2151, -1822, 2150, -1822, 2148, -1823, 2147, -1825, 2147, -1825, 2115, -1828, 2112 )
+
+[node name="AUto 6" type="StaticBody2D" parent="."]
+position = Vector2( 119, 0 )
+
+[node name="AutoPink" type="Sprite" parent="AUto 6"]
+position = Vector2( -1840, 2144 )
+texture = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AUto 6"]
+position = Vector2( 6.4906, -2.07446 )
+scale = Vector2( 1.00347, 1.00099 )
+polygon = PoolVector2Array( -1841, 2112, -1852, 2112, -1855, 2115, -1855, 2147, -1857, 2147, -1858, 2148, -1858, 2150, -1857, 2151, -1855, 2151, -1855, 2162, -1855, 2172, -1852, 2175, -1850, 2175, -1830, 2175, -1828, 2175, -1825, 2172, -1825, 2151, -1823, 2151, -1822, 2150, -1822, 2148, -1823, 2147, -1825, 2147, -1825, 2115, -1828, 2112 )
+
+[node name="AUto 7" type="StaticBody2D" parent="."]
+position = Vector2( 159, 1 )
+
+[node name="AutoPink" type="Sprite" parent="AUto 7"]
+position = Vector2( -1840, 2144 )
+texture = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AUto 7"]
+polygon = PoolVector2Array( -1841, 2112, -1852, 2112, -1855, 2115, -1855, 2147, -1857, 2147, -1858, 2148, -1858, 2150, -1857, 2151, -1855, 2151, -1855, 2162, -1855, 2172, -1852, 2175, -1850, 2175, -1830, 2175, -1828, 2175, -1825, 2172, -1825, 2151, -1823, 2151, -1822, 2150, -1822, 2148, -1823, 2147, -1825, 2147, -1825, 2115, -1828, 2112 )
+
+[node name="AUto 8" type="StaticBody2D" parent="."]
+position = Vector2( 199, 1 )
+
+[node name="AutoPink" type="Sprite" parent="AUto 8"]
+position = Vector2( -1840, 2144 )
+texture = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AUto 8"]
+polygon = PoolVector2Array( -1841, 2112, -1852, 2112, -1855, 2115, -1855, 2147, -1857, 2147, -1858, 2148, -1858, 2150, -1857, 2151, -1855, 2151, -1855, 2162, -1855, 2172, -1852, 2175, -1850, 2175, -1830, 2175, -1828, 2175, -1825, 2172, -1825, 2151, -1823, 2151, -1822, 2150, -1822, 2148, -1823, 2147, -1825, 2147, -1825, 2115, -1828, 2112 )
+
+[node name="AUto 9" type="StaticBody2D" parent="."]
+position = Vector2( 238, 1 )
+
+[node name="AutoPink" type="Sprite" parent="AUto 9"]
+position = Vector2( -1840, 2144 )
+texture = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AUto 9"]
+polygon = PoolVector2Array( -1841, 2112, -1852, 2112, -1855, 2115, -1855, 2147, -1857, 2147, -1858, 2148, -1858, 2150, -1857, 2151, -1855, 2151, -1855, 2162, -1855, 2172, -1852, 2175, -1850, 2175, -1830, 2175, -1828, 2175, -1825, 2172, -1825, 2151, -1823, 2151, -1822, 2150, -1822, 2148, -1823, 2147, -1825, 2147, -1825, 2115, -1828, 2112 )
+
+[node name="bank 1" type="StaticBody2D" parent="."]
+position = Vector2( -80, -63 )
+
+[node name="Bank2" type="Sprite" parent="bank 1"]
+position = Vector2( 3121, 3117 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bank 1"]
+position = Vector2( 3121, 3112 )
+shape = SubResource( 15 )
+
+[node name="bank 2" type="StaticBody2D" parent="."]
+position = Vector2( -930, -158 )
+
+[node name="Bank2" type="Sprite" parent="bank 2"]
+position = Vector2( 3121, 3117 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bank 2"]
+position = Vector2( 3121, 3112 )
+shape = SubResource( 15 )
+
+[node name="bank 3" type="StaticBody2D" parent="."]
+position = Vector2( -820, -483 )
+
+[node name="Bank2" type="Sprite" parent="bank 3"]
+position = Vector2( 3121, 3117 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bank 3"]
+position = Vector2( 3121, 3112 )
+shape = SubResource( 15 )
+
+[node name="bank 4" type="StaticBody2D" parent="."]
+position = Vector2( -497, -698 )
+
+[node name="Bank2" type="Sprite" parent="bank 4"]
+position = Vector2( 3121, 3117 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bank 4"]
+position = Vector2( 3121, 3112 )
+shape = SubResource( 15 )
+
+[node name="bank 5" type="StaticBody2D" parent="."]
+position = Vector2( -44, -641 )
+
+[node name="Bank2" type="Sprite" parent="bank 5"]
+position = Vector2( 3121, 3117 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bank 5"]
+position = Vector2( 3121, 3112 )
+shape = SubResource( 15 )
+
+[node name="bank 6" type="StaticBody2D" parent="."]
+position = Vector2( -1400, -736 )
+
+[node name="Bank2" type="Sprite" parent="bank 6"]
+position = Vector2( 3121, 3117 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bank 6"]
+position = Vector2( 3121, 3112 )
+shape = SubResource( 15 )
+
+[node name="bank 7" type="StaticBody2D" parent="."]
+position = Vector2( -2108, -1887 )
+
+[node name="Bank2" type="Sprite" parent="bank 7"]
+position = Vector2( 3121, 3117 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bank 7"]
+position = Vector2( 3121, 3112 )
+shape = SubResource( 15 )
 
 [connection signal="health_changed" from="Player" to="CanvasLayer/healthBar" method="_on_Player_health_changed"]
 [connection signal="body_entered" from="hqPos" to="." method="_on_hqPos_body_entered"]
