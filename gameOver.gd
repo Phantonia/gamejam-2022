@@ -24,6 +24,6 @@ func _ready():
 	$label.text = msg
 
 func _input(event):
-	if event is InputEventKey:
+	if false and event is InputEventKey:
 		yield(get_tree().create_timer(.5), "timeout")
 		get_tree().change_scene("res://game.tscn")
