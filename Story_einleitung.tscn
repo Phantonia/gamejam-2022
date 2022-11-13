@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/font/Lato-Italic.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/font/Lato-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/Hintergrund.png" type="Texture" id=3]
+[ext_resource path="res://startbutton.gd" type="Script" id=4]
+[ext_resource path="res://assets/objekte/startbutton.premiumpng.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 10
@@ -25,40 +27,64 @@ scale = Vector2( 0.234815, 0.203333 )
 texture = ExtResource( 3 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 1.0
-margin_right = 423.0
+margin_left = 25.0
+margin_right = 396.0
 margin_bottom = 209.0
+mouse_filter = 1
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0.909804, 0.886275, 0.886275, 1 )
 custom_fonts/italics_font = SubResource( 1 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = " „Gab es jemals einen Zeitpunkt auf Erden, wo nicht alles im Chaos lag. …
+
 Vielleicht bevor wir hier waren. Zu einer Zeit wo alles Leben konnte. Wo wir niemanden beklaut, verdrängt, getötet oder versklavt haben zu unseren eigenen Vorteil. 
+
 Wir: die Menschheit
+
 Sie: alles andere
+
 Ob wir weiter kämpfen sollten, für die Freiheit der Menschheit  oder nicht, weiß hier schon lange keiner mehr. 
+
 Verdienen wir die Freiheit überhaupt.
+
 Obwohl mich Zweifel plagen hör ich nicht auf zu kämpfen. Vielleicht weil ich ihnen etwas schuldig bin. Vielleicht begehre ich die Freiheit. Vielleicht ist es auch nur der menschliche drang alles selbst zu kontrollieren statt kontrolliert zu werden.“
 
 Was bisher geschah:
+
 Wir schreiben das Jahr 1348 n.E. - [i]Oder vielleicht auch nicht[/i]. 
+
 Die Nationalsozialistische Diktatur des 20. Jahrhunderts der alten Zeitrechnung, hielt sich lange im Untergrund versteckt. Im Jahr 1 der Erlösung – [i]so nennen es zumindest die Anhänger der Diktatur [/i] – haben sich die „Nachfahren“ – [i] alle Anhänger des Nationalsozialismus [/i] – auf der ganzen Welt erhoben und sämtliche Regierungen gestürzt. 
+
 [i]Die meisten hätten wahrscheinlich erwartet, dass mit der zunehmenden Verbreitung von Frieden und Akzeptanz auf der ganzen Welt, wir endlich einen Zustand erreicht hätten in der Jeder sich so frei entfalten kann wie er will, ohne andere zu verletzen. 
+
 Leider war es in Wirklichkeit ganz anders.[/i]
+
 Die Unterdrücker auf der ganzen Welt schlossen sich unter dem Nationalsozialismus zusammen und beschlossen sich stückchenweise zurück zu ziehen. So versammelten sie über Jahrhunderte hinweg Anhänger verschiedenster Klassen im Untergrund. Angefangen hat es mit ein  paar Tausend. Mehrere Generationen später waren es mehr als die Hälfte der Weltbevölkerung. 
 
+
 Vor der „Erlösung“ der gesamten Welt durch das Regime der Nachfahren, lebten die Anhänger genau so frei ihr Leben wie alle anderen. Sehr schnell nach der „Erlösung“ merkte man wer zu den Nachfahren gehörte. Plötzlich wirkten sie so als hätte jemand „copy-paste“ gemacht und Fähigkeiten so verteilt, dass sie dem Regime nützen.
+
 Nach geraumer Zeit erging es jedem so.
+
 Wer sich nicht an die Regeln der Nachfahren hielt wurde inhaftiert und zur Arbeit gezwungen.  Im Gegensatz zur Diktatur des Nationalsozialismus 1933-1945 in der alten Zeitrechnung, haben die Nachfahren niemanden getötet der sich gegen sie aufgelehnt hat oder der nicht in ihre Norm reingepasst. Alle wurden Inhaftiert – [i] schließlich brauchten sie ihre Sklaven [/i]-. 
+
 870 Jahre nach der Erlösung haben die obersten Wissenschaftler der Nachfahren ihr Projekt „Dream Record“ erfolgreich beendet. Sie haben ein Gerät erschaffen, welches durch elektromagnetische Wellen die Gehirnströme im Schlaff so verstärkt, dass diese empfangen und aufgezeichnet werden können. „Dream Record“ ermöglichte den  Nachfahren, die Träume sämtlicher Menschen aufzuzeichnen und wiederzugeben.  
+
 Ein Gegner der Diktatur kam an diese Informationen. Heute unter dem Namen Tori bekannt, verbreitete er diese Informationen heimlich. Schnell war „Dream Record“ auf der ganzen Welt bekannt. Den treuen Anhänger der Nachfahren störte es nicht, sie begrüßten die neue Technologie. 
+
 Innerhalb kurzer Zeit bildete sich ein Widersand unter Tori. Diesmal waren es die Vertreter von Freiheit und Akzeptanz die sie im Untergrund versteckten und versammelten.   
+
 Unabhängig davon, dass es schon längst eine Rebellen Bewegung gegen sie gab, wollten die Nachfahren, dass „Dream Record“ weiter entwickelt wird. Sie wollten mit ihrer Maschine die Träume beeinflussen können, um gezielter Informationen über eventuelle Regimegegner oder Rebellen zu erlangen.  
+
 Länger – [i] für uns viel zu früh [/i] – als erwartet hat es gedauert bis „Dream Control“ fertig gestellt wurde. 1341 war es erstmals erfolgreich im Einsatz. Die Rebellion, mittlerweile bekannt als Punk Fluffy Unicorns, schaffte es durch ihre Undercover Arbeit – [i] wir waren schon seit „Dream Record“ beunruhigt, was nie jemand zugeben würde, und verschafften uns Informationen über den Fortschritt der Forschung [/i]  – relativ schnell an eine Kopie von „Dream Control“.
+
 PFU nutze das Programm ausschließlich dafür heraus zu finden wie man sich daraus befreit. Die einzige Möglichkeit bestand darin sich im Traum umzubringen. Das Problem: erkennen ob es ein Traum oder die Realität ist. Es war sogar ein sehr großes Problem, weil es fatal wäre sich in der Realität umzubringen. 
+
 Die Mitglieder von PFU verbrachten viel Zeit damit Informationen über die Traumwelten zu sammeln, um heraus zu finden wie man sie von der Realität unterscheiden kann. 
+
 Währenddessen setzten die Nachfahren „Dream Control“ zunehmend häufiger ein. Zu Beginn fehlten ihnen die Ressourcen für größere Einsätze. Anfang des Jahres 1347 n.E. konnte das Programm erstmals mehr als 1% der Weltbevölkerung auf einmal im Traum beeinflussen – [i] zum ersten Mal mussten wir befürchten großflächig aufzufliegen [/i] – und gezielt Personen auswählen. 
+
 Die PFU-Mitglieder haben sich auf unterschiedliche Dinge für „Dream Control“ spezialisiert. Am wichtigsten sind die PLAYER. Sie sind die besten, wenn es darum geht aus „Dream Control“ rauszukommen.
 
 
@@ -66,34 +92,65 @@ Die PFU-Mitglieder haben sich auf unterschiedliche Dinge für „Dream Control�
 Du bist ein PLAYER.  
 "
 text = " „Gab es jemals einen Zeitpunkt auf Erden, wo nicht alles im Chaos lag. …
+
 Vielleicht bevor wir hier waren. Zu einer Zeit wo alles Leben konnte. Wo wir niemanden beklaut, verdrängt, getötet oder versklavt haben zu unseren eigenen Vorteil. 
+
 Wir: die Menschheit
+
 Sie: alles andere
+
 Ob wir weiter kämpfen sollten, für die Freiheit der Menschheit  oder nicht, weiß hier schon lange keiner mehr. 
+
 Verdienen wir die Freiheit überhaupt.
+
 Obwohl mich Zweifel plagen hör ich nicht auf zu kämpfen. Vielleicht weil ich ihnen etwas schuldig bin. Vielleicht begehre ich die Freiheit. Vielleicht ist es auch nur der menschliche drang alles selbst zu kontrollieren statt kontrolliert zu werden.“
 
 Was bisher geschah:
+
 Wir schreiben das Jahr 1348 n.E. - Oder vielleicht auch nicht. 
+
 Die Nationalsozialistische Diktatur des 20. Jahrhunderts der alten Zeitrechnung, hielt sich lange im Untergrund versteckt. Im Jahr 1 der Erlösung – so nennen es zumindest die Anhänger der Diktatur  – haben sich die „Nachfahren“ –  alle Anhänger des Nationalsozialismus  – auf der ganzen Welt erhoben und sämtliche Regierungen gestürzt. 
+
 Die meisten hätten wahrscheinlich erwartet, dass mit der zunehmenden Verbreitung von Frieden und Akzeptanz auf der ganzen Welt, wir endlich einen Zustand erreicht hätten in der Jeder sich so frei entfalten kann wie er will, ohne andere zu verletzen. 
+
 Leider war es in Wirklichkeit ganz anders.
+
 Die Unterdrücker auf der ganzen Welt schlossen sich unter dem Nationalsozialismus zusammen und beschlossen sich stückchenweise zurück zu ziehen. So versammelten sie über Jahrhunderte hinweg Anhänger verschiedenster Klassen im Untergrund. Angefangen hat es mit ein  paar Tausend. Mehrere Generationen später waren es mehr als die Hälfte der Weltbevölkerung. 
 
+
 Vor der „Erlösung“ der gesamten Welt durch das Regime der Nachfahren, lebten die Anhänger genau so frei ihr Leben wie alle anderen. Sehr schnell nach der „Erlösung“ merkte man wer zu den Nachfahren gehörte. Plötzlich wirkten sie so als hätte jemand „copy-paste“ gemacht und Fähigkeiten so verteilt, dass sie dem Regime nützen.
+
 Nach geraumer Zeit erging es jedem so.
+
 Wer sich nicht an die Regeln der Nachfahren hielt wurde inhaftiert und zur Arbeit gezwungen.  Im Gegensatz zur Diktatur des Nationalsozialismus 1933-1945 in der alten Zeitrechnung, haben die Nachfahren niemanden getötet der sich gegen sie aufgelehnt hat oder der nicht in ihre Norm reingepasst. Alle wurden Inhaftiert –  schließlich brauchten sie ihre Sklaven -. 
+
 870 Jahre nach der Erlösung haben die obersten Wissenschaftler der Nachfahren ihr Projekt „Dream Record“ erfolgreich beendet. Sie haben ein Gerät erschaffen, welches durch elektromagnetische Wellen die Gehirnströme im Schlaff so verstärkt, dass diese empfangen und aufgezeichnet werden können. „Dream Record“ ermöglichte den  Nachfahren, die Träume sämtlicher Menschen aufzuzeichnen und wiederzugeben.  
+
 Ein Gegner der Diktatur kam an diese Informationen. Heute unter dem Namen Tori bekannt, verbreitete er diese Informationen heimlich. Schnell war „Dream Record“ auf der ganzen Welt bekannt. Den treuen Anhänger der Nachfahren störte es nicht, sie begrüßten die neue Technologie. 
+
 Innerhalb kurzer Zeit bildete sich ein Widersand unter Tori. Diesmal waren es die Vertreter von Freiheit und Akzeptanz die sie im Untergrund versteckten und versammelten.   
+
 Unabhängig davon, dass es schon längst eine Rebellen Bewegung gegen sie gab, wollten die Nachfahren, dass „Dream Record“ weiter entwickelt wird. Sie wollten mit ihrer Maschine die Träume beeinflussen können, um gezielter Informationen über eventuelle Regimegegner oder Rebellen zu erlangen.  
+
 Länger –  für uns viel zu früh  – als erwartet hat es gedauert bis „Dream Control“ fertig gestellt wurde. 1341 war es erstmals erfolgreich im Einsatz. Die Rebellion, mittlerweile bekannt als Punk Fluffy Unicorns, schaffte es durch ihre Undercover Arbeit –  wir waren schon seit „Dream Record“ beunruhigt, was nie jemand zugeben würde, und verschafften uns Informationen über den Fortschritt der Forschung   – relativ schnell an eine Kopie von „Dream Control“.
+
 PFU nutze das Programm ausschließlich dafür heraus zu finden wie man sich daraus befreit. Die einzige Möglichkeit bestand darin sich im Traum umzubringen. Das Problem: erkennen ob es ein Traum oder die Realität ist. Es war sogar ein sehr großes Problem, weil es fatal wäre sich in der Realität umzubringen. 
+
 Die Mitglieder von PFU verbrachten viel Zeit damit Informationen über die Traumwelten zu sammeln, um heraus zu finden wie man sie von der Realität unterscheiden kann. 
+
 Währenddessen setzten die Nachfahren „Dream Control“ zunehmend häufiger ein. Zu Beginn fehlten ihnen die Ressourcen für größere Einsätze. Anfang des Jahres 1347 n.E. konnte das Programm erstmals mehr als 1% der Weltbevölkerung auf einmal im Traum beeinflussen –  zum ersten Mal mussten wir befürchten großflächig aufzufliegen  – und gezielt Personen auswählen. 
+
 Die PFU-Mitglieder haben sich auf unterschiedliche Dinge für „Dream Control“ spezialisiert. Am wichtigsten sind die PLAYER. Sie sind die besten, wenn es darum geht aus „Dream Control“ rauszukommen.
 
 
 
 Du bist ein PLAYER.  
 "
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 290.0
+margin_top = 160.0
+margin_right = 418.0
+margin_bottom = 208.0
+texture_normal = ExtResource( 5 )
+script = ExtResource( 4 )
