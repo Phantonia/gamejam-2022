@@ -33,6 +33,7 @@ GlobalVariables="*res://global_variables.gd"
 window/size/width=420
 window/size/height=210
 window/size/resizable=false
+window/size/fullscreen=true
 window/size/test_width=1024
 window/size/test_height=600
 window/stretch/mode="viewport"

@@ -1160,13 +1160,13 @@ extents = Vector2( 30.625, 20 )
 extents = Vector2( 17.9375, 33.6 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 140, 100.5 )
+extents = Vector2( 144, 105 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 140, 101.5 )
+extents = Vector2( 144, 105.25 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 73.5, 80.5 )
+extents = Vector2( 64, 80 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 208.462, 85.5922 )
@@ -1188,6 +1188,9 @@ bg_color = Color( 1, 0, 0, 1 )
 
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.207843, 0.207843, 0.207843, 1 )
+
+[sub_resource type="CircleShape2D" id=16]
+radius = 292.323
 
 [node name="game" type="Node2D"]
 script = ExtResource( 4 )
@@ -1236,60 +1239,60 @@ polygon = PoolVector2Array( 888, 1836, 912, 1915, 1196, 1953, 1225, 2094, 1430, 
 polygon = PoolVector2Array( -591, 1037, -634, 1212, -385, 1274, -909, 3326, -1161, 3267, -1200, 3436, -468, 3613, -430, 3449, -626, 3399, -474, 2801, -32, 2822, -31, 2789, 41, 2793, 28, 3109, 179, 3115, 194, 2799, 538, 2816, 561, 2296, 665, 2300, 693, 1773, 587, 1767, 609, 1337, 415, 1328, 418, 1205, 127, 1147, 165, 998, -24, 953, -81, 1144 )
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Buildings"]
-polygon = PoolVector2Array( 654, 3342, 736, 3342, 736, 3474, 538, 3477, 539, 3048, 922, 3048, 921, 3262, 811, 3261, 811, 3179, 654, 3180 )
+polygon = PoolVector2Array( 672, 3328, 736, 3328, 736, 3456, 544, 3456, 544, 3040, 928, 3040, 928, 3264, 800, 3264, 800, 3168, 672, 3168 )
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Buildings"]
 position = Vector2( 405, -570 )
-polygon = PoolVector2Array( 654, 3342, 736, 3342, 736, 3474, 538, 3477, 539, 3048, 922, 3048, 921, 3262, 811, 3261, 811, 3179, 749.72, 3179.39, 654, 3180 )
+polygon = PoolVector2Array( 651, 3354, 715, 3354, 715, 3482, 523, 3482, 523, 3034, 939, 3034, 939, 3258, 811, 3258, 811, 3162, 651, 3162 )
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Buildings"]
 position = Vector2( 1730, -859 )
-polygon = PoolVector2Array( 654, 3342, 736, 3342, 736, 3474, 538, 3477, 539, 3048, 922, 3048, 921, 3262, 811, 3261, 811, 3179, 749.72, 3179.39, 654, 3180 )
+polygon = PoolVector2Array( 670, 3323, 734, 3323, 734, 3451, 542, 3451, 542, 3035, 926, 3035, 926, 3259, 798, 3259, 798, 3163, 670, 3163 )
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Buildings"]
 position = Vector2( 6309, 1539 )
 rotation = 1.5708
-polygon = PoolVector2Array( 668.012, 3333, 734.012, 3333, 736, 3474, 538, 3477, 539.011, 3077, 924.011, 3077, 925.012, 3269, 796.012, 3268, 798.012, 3204, 736.012, 3204, 668.012, 3206 )
+polygon = PoolVector2Array( 669.012, 3333, 733.012, 3333, 733.013, 3461, 541.013, 3461, 541.011, 3077, 925.011, 3077, 925.012, 3269, 797.012, 3269, 797.012, 3205, 669.012, 3205 )
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Buildings"]
 position = Vector2( 5270, 2426 )
 rotation = 1.5708
-polygon = PoolVector2Array( 654, 3342, 736, 3342, 736, 3474, 538, 3477, 539, 3048, 922, 3048, 921, 3262, 811, 3261, 811, 3179, 749.72, 3179.39, 654, 3180 )
+polygon = PoolVector2Array( 646.012, 3350, 742.012, 3350, 742.012, 3478, 518.012, 3478, 518.011, 3062, 902.011, 3062, 902.012, 3286, 774.012, 3287, 774.011, 3190, 646.011, 3190 )
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Buildings"]
 position = Vector2( 4940, 1849 )
 rotation = 1.5708
-polygon = PoolVector2Array( 654, 3342, 736, 3342, 736, 3474, 538, 3477, 539, 3048, 922, 3048, 921, 3262, 811, 3261, 811, 3179, 749.72, 3179.39, 654, 3180 )
+polygon = PoolVector2Array( 647.012, 3340, 743.012, 3340, 743.012, 3468, 519.012, 3468, 519.011, 3052, 935.011, 3052, 935.012, 3276, 807.012, 3276, 807.011, 3180, 749.72, 3179.39, 647.011, 3180 )
 
 [node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Buildings"]
 position = Vector2( 1865, 6668 )
 rotation = 3.14159
-polygon = PoolVector2Array( 654, 3342, 736, 3342, 736, 3474, 538, 3477, 539, 3048, 922, 3048, 921, 3262, 811, 3261, 811, 3179, 749.72, 3179.39, 654, 3180 )
+polygon = PoolVector2Array( 648.992, 3340, 744.992, 3340, 744.991, 3468, 520.991, 3468, 520.992, 3052, 936.992, 3052, 936.992, 3276, 808.992, 3276, 808.992, 3180, 648.992, 3180 )
 
 [node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Buildings"]
 position = Vector2( 3407, 6042 )
 rotation = 3.14159
-polygon = PoolVector2Array( 654, 3342, 736, 3342, 736, 3474, 538, 3477, 539, 3048, 922, 3048, 921, 3262, 811, 3261, 811, 3179, 749.72, 3179.39, 654, 3180 )
+polygon = PoolVector2Array( 654.991, 3354, 750.991, 3354, 750.991, 3482, 526.991, 3482, 526.992, 3066, 942.992, 3066, 942.992, 3258, 814.992, 3258, 814.992, 3194, 654.992, 3194 )
 
 [node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Buildings"]
 position = Vector2( -1545, 4160 )
 rotation = 4.71239
-polygon = PoolVector2Array( 654, 3342, 736, 3342, 736, 3474, 538, 3477, 539, 3048, 922, 3048, 921, 3262, 811, 3261, 811, 3179, 749.72, 3179.39, 654, 3180 )
+polygon = PoolVector2Array( 672.003, 3337, 736.003, 3337, 736.003, 3465, 544.003, 3465, 544.003, 3049, 928.003, 3049, 928.003, 3273, 800.003, 3273, 800.003, 3177, 672.003, 3177 )
 
 [node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Buildings"]
 position = Vector2( 0, -1 )
 polygon = PoolVector2Array( 2719, 1377, 2720, 1729, 3232, 1730, 3233, 1536, 3551, 1537, 3551, 1695, 3871, 1695, 3873, 1345, 3552, 1345, 3552, 1183, 3199, 1184, 3195, 1374 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Buildings"]
-position = Vector2( 454, 1011.5 )
+position = Vector2( 464, 1008 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Buildings"]
-position = Vector2( 1085, 1108.5 )
+position = Vector2( 1072, 1103.75 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Buildings"]
-position = Vector2( 1042.5, 1481.5 )
+position = Vector2( 1024, 1488 )
 shape = SubResource( 6 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Buildings"]
@@ -1347,10 +1350,6 @@ position = Vector2( 391, 31 )
 scale = Vector2( 0.9725, 0.9725 )
 texture = ExtResource( 7 )
 script = ExtResource( 8 )
-
-[node name="MissionStatement" type="Label" parent="CanvasLayer" groups=["mission_statement"]]
-margin_right = 40.0
-margin_bottom = 14.0
 
 [node name="collectible" parent="." instance=ExtResource( 6 )]
 position = Vector2( -2901, -291 )
@@ -1456,6 +1455,29 @@ stream = ExtResource( 11 )
 autoplay = true
 
 [node name="MissionManager" parent="." instance=ExtResource( 9 )]
+
+[node name="possibleCollectibleLocations" type="Node2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="possibleCollectibleLocations"]
+position = Vector2( -2807, -273 )
+
+[node name="Node2D2" type="Node2D" parent="possibleCollectibleLocations"]
+position = Vector2( 5011, 395 )
+
+[node name="Node2D3" type="Node2D" parent="possibleCollectibleLocations"]
+position = Vector2( -3493, 3430 )
+
+[node name="Node2D4" type="Node2D" parent="possibleCollectibleLocations"]
+position = Vector2( -323, 2954 )
+
+[node name="Node2D5" type="Node2D" parent="possibleCollectibleLocations"]
+position = Vector2( 3394, 1724 )
+
+[node name="hqPos" type="Area2D" parent="."]
+position = Vector2( 1447, 2946 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hqPos"]
+shape = SubResource( 16 )
 
 [connection signal="health_changed" from="Player" to="CanvasLayer/healthBar" method="_on_Player_health_changed"]
 [connection signal="pick_up" from="Player" to="collectible" method="_on_Player_pick_up"]

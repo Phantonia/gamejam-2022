@@ -24,10 +24,15 @@ func _ready():
 	print("Dream = " + str(dream))
 	
 	var removeCount = $nazis.get_child_count() - nazi_count_for_level(GlobalVariables.level)
-#	print("removeCount = " + str(removeCount))
+	print("Remove " + str(removeCount) + " nazis to get to " + str(nazi_count_for_level(GlobalVariables.level)))
 	for i in range(removeCount):
-		var index = randi() % $nazis.get_child_count()
-		$nazis.get_child(index).queue_free()
+		while true:
+			var index = randi() % $nazis.get_child_count()
+			var child = $nazis.get_child(index)
+			if child.is_in_group("Nazi"):
+				child.queue_free()
+				$nazis.remove_child(child)
+				break
 		
 	$"CanvasLayer/nazisLeft".text = str(get_nazi_count()) + " Nazis left"
 
@@ -48,7 +53,7 @@ func _on_collectible_picked_up(collectible: Area2D):
 
 func _on_hqPos_body_entered(body):
 	if body.is_in_group("Player"):
-		if picked_up and get_nazi_count() == 0:
+		if picked_up: #and get_nazi_count() == 0:
 			GlobalVariables.last_mission_success = true
 			get_tree().change_scene("res://gameOver.tscn")
 
